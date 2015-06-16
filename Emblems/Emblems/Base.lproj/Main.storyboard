@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="re8-gG-tpv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Protecting the Emblems-->
+        <scene sceneID="y76-bu-1yh">
+            <objects>
+                <viewController title="Protecting the Emblems" id="KIe-wL-mRs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oCl-P9-VwA"/>
+                        <viewControllerLayoutGuide type="bottom" id="dc6-Hx-a4q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b5k-he-F1f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Protecting the Emblems" id="44K-JK-Sl2">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="16B-n0-aq0">
+                            <connections>
+                                <segue destination="eLB-5C-SOI" kind="unwind" unwindAction="unwindToHomeScreenViewController:sender:" id="vnL-I8-Opb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Cv-Zt-GH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eLB-5C-SOI" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="696"/>
+        </scene>
+        <!--About the Emblems-->
+        <scene sceneID="NNQ-KR-0u9">
+            <objects>
+                <viewController title="About the Emblems" id="fgn-y2-UFR" customClass="ViewController" customModule="Emblems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cge-eo-vZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fmx-qR-N1R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="21V-AE-wXX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About the Emblems" id="4Co-iw-ihX">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="fmC-Y2-A80">
+                            <connections>
+                                <segue destination="LY9-KQ-V7x" kind="unwind" unwindAction="unwindToHomeScreenViewController:sender:" id="upf-Ke-fvr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="21V-AE-wXX" id="ye5-VU-kAU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mV-WG-KeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LY9-KQ-V7x" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="34"/>
+        </scene>
+        <!--About Content-->
+        <scene sceneID="BTH-xp-zz9">
+            <objects>
+                <tabBarController title="About Content" id="dS6-LW-ncz" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="V58-xh-maJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hDo-Jb-WgY" kind="relationship" relationship="viewControllers" id="eC2-4C-sQo"/>
+                        <segue destination="tD7-5I-yGd" kind="relationship" relationship="viewControllers" id="GWM-Vb-HL5"/>
+                        <segue destination="oh8-y7-ggo" kind="relationship" relationship="viewControllers" id="gVw-An-3Ac"/>
+                        <segue destination="Cjr-I8-zgZ" kind="relationship" relationship="viewControllers" id="1St-9w-t9v"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9f-ew-ybe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="366"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="KwY-QR-fyO">
+            <objects>
+                <navigationController title="About" automaticallyAdjustsScrollViewInsets="NO" id="hDo-Jb-WgY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" id="7CN-GD-A3N" userLabel="About"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n6T-VZ-KYk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fgn-y2-UFR" kind="relationship" relationship="rootViewController" id="XQd-92-Yrg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pM-Gk-zeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="34"/>
+        </scene>
+        <!--Protect-->
+        <scene sceneID="hMA-Bp-855">
+            <objects>
+                <navigationController title="Protect" automaticallyAdjustsScrollViewInsets="NO" id="tD7-5I-yGd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Protect" id="gOD-8x-JuZ" userLabel="Protect"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BtH-0B-hHS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KIe-wL-mRs" kind="relationship" relationship="rootViewController" id="6U0-4Z-Q3G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0q-FY-yIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="696"/>
+        </scene>
+        <!--Report Misuse-->
+        <scene sceneID="uWF-o4-Bgn">
+            <objects>
+                <viewController title="Report Misuse" id="tbG-1I-P1y" customClass="ReportMisuseViewController" customModule="Emblems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nGA-zg-vrj"/>
+                        <viewControllerLayoutGuide type="bottom" id="l2X-No-fJC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HAb-Ly-CGB" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kId-Yj-kg0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u8-QD-Wln">
+                                        <rect key="frame" x="262" y="80" width="77" height="30"/>
+                                        <state key="normal" title="Take Photo">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto" destination="tbG-1I-P1y" eventType="touchUpInside" id="U6L-mY-Qta"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add notes..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-Qr-XFG">
+                                        <rect key="frame" x="200" y="424" width="200" height="100"/>
+                                        <accessibility key="accessibilityConfiguration" hint="" label="Notes..."/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="AHL-qK-guj"/>
+                                            <constraint firstAttribute="width" constant="200" id="N7o-WT-3Jn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX6-sI-oCH">
+                                        <rect key="frame" x="257" y="118" width="87" height="30"/>
+                                        <state key="normal" title="From Library">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Qv-ZP-u5f">
+                                        <rect key="frame" x="175" y="159" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="ONq-kw-F1E"/>
+                                            <constraint firstAttribute="width" constant="250" id="TUw-ZH-0Dt"/>
+                                            <constraint firstAttribute="height" constant="194" id="eVD-qi-mql"/>
+                                            <constraint firstAttribute="width" constant="322" id="mSw-Xf-rY5"/>
+                                            <constraint firstAttribute="height" constant="194" id="pYW-cp-Vd2"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="eVD-qi-mql"/>
+                                                <exclude reference="mSw-Xf-rY5"/>
+                                                <exclude reference="pYW-cp-Vd2"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-sC-nyG">
+                                        <rect key="frame" x="276" y="532" width="49" height="30"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qX6-sI-oCH" firstAttribute="top" secondItem="8u8-QD-Wln" secondAttribute="bottom" constant="8" id="F6v-13-SRL"/>
+                                    <constraint firstItem="2Qv-ZP-u5f" firstAttribute="top" secondItem="qX6-sI-oCH" secondAttribute="bottom" constant="11" id="sHY-3C-OjA"/>
+                                    <constraint firstItem="UUz-Qr-XFG" firstAttribute="top" secondItem="2Qv-ZP-u5f" secondAttribute="bottom" constant="15" id="v1X-Ic-VrG"/>
+                                    <constraint firstItem="JOF-sC-nyG" firstAttribute="top" secondItem="UUz-Qr-XFG" secondAttribute="bottom" constant="8" id="xyK-ZX-ux8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Report Misuse" id="txV-7e-JIK">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="YbJ-Ub-3K3">
+                            <connections>
+                                <segue destination="IRJ-HH-Ho4" kind="unwind" unwindAction="unwindToHomeScreenViewController:sender:" id="dKg-Xz-krx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="imageView" destination="2Qv-ZP-u5f" id="MHW-W2-sRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbf-BY-dSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IRJ-HH-Ho4" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="1360"/>
+        </scene>
+        <!--Report-->
+        <scene sceneID="hkB-f3-AjO">
+            <objects>
+                <navigationController title="Report" automaticallyAdjustsScrollViewInsets="NO" id="Cjr-I8-zgZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Report" id="Icq-Ts-Yey" userLabel="Report"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rkU-rC-6j8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tbG-1I-P1y" kind="relationship" relationship="rootViewController" id="x75-GO-otb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5d-vE-qwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1360"/>
+        </scene>
+        <!--Guide to Usage-->
+        <scene sceneID="w1v-Tg-aA2">
+            <objects>
+                <viewController title="Guide to Usage" id="cLl-Lo-1zL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QTg-2O-Ha8"/>
+                        <viewControllerLayoutGuide type="bottom" id="FjU-Jk-9NQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BKF-l6-kab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Guide to Usage" id="n54-F8-IMO">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="wyi-JP-Hl3">
+                            <connections>
+                                <segue destination="XJK-TG-ZEG" kind="unwind" unwindAction="unwindToHomeScreenViewController:sender:" id="aCR-PG-jcV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9Q-lb-LLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XJK-TG-ZEG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="2030"/>
+        </scene>
+        <!--Guide-->
+        <scene sceneID="PQ9-H5-e73">
+            <objects>
+                <navigationController title="Guide" automaticallyAdjustsScrollViewInsets="NO" id="oh8-y7-ggo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Guide" id="tBY-gN-Fws" userLabel="Guide"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qAh-6d-WCc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cLl-Lo-1zL" kind="relationship" relationship="rootViewController" id="6kr-IU-ofj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHU-f9-xQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="2030"/>
+        </scene>
+        <!--Splash-->
+        <scene sceneID="xbk-3q-gEe">
+            <objects>
+                <viewController title="Splash" id="re8-gG-tpv" customClass="HomeScreenViewController" customModule="Emblems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zzl-aq-MuM"/>
+                        <viewControllerLayoutGuide type="bottom" id="p6q-fs-SHP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aTS-Su-15U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HQ-cH-ktA">
+                                <rect key="frame" x="232" y="285" width="135" height="30"/>
+                                <state key="normal" title="About the Emblems">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dS6-LW-ncz" kind="show" id="VQh-Ld-NNW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-Yv-p5g">
+                                <rect key="frame" x="249" y="359" width="100" height="30"/>
+                                <state key="normal" title="Report Misuse">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Cjr-I8-zgZ" kind="show" id="PWc-ii-2pb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="2HQ-cH-ktA" secondAttribute="centerY" id="3kb-UA-XxV"/>
+                            <constraint firstAttribute="centerX" secondItem="2HQ-cH-ktA" secondAttribute="centerX" id="J1v-GE-wsH"/>
+                            <constraint firstAttribute="centerY" secondItem="Y12-Yv-p5g" secondAttribute="centerY" constant="-74" id="KdA-SK-hgO"/>
+                            <constraint firstItem="Y12-Yv-p5g" firstAttribute="centerX" secondItem="2HQ-cH-ktA" secondAttribute="centerX" id="uTN-ex-Ogm"/>
+                            <constraint firstItem="Y12-Yv-p5g" firstAttribute="top" secondItem="2HQ-cH-ktA" secondAttribute="bottom" constant="44" id="x30-qo-xtU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5EF-il-8d7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="366"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1St-9w-t9v"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -1,0 +1,19 @@
+html {
+	font-family: Calibri;
+	color: #8d817b;
+}
+
+body {
+	background-color: #f8f6f5;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 16px;
+	margin: 15px 0 5px 0;
+}
+
+p {
+	font-size: 14px;
+	margin: 0 0 5px 0;
+}
