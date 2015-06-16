@@ -1,0 +1,6 @@
+framework module SMTPAPI {
+  umbrella header "Pods-Emblems-SMTPAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

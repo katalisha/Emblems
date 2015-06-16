@@ -1,0 +1,6 @@
+framework module SendGrid {
+  umbrella header "Pods-Emblems-SendGrid-umbrella.h"
+
+  export *
+  module * { export * }
+}
