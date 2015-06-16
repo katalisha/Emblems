@@ -14,10 +14,10 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBOutlet weak var imageView: UIImageView!
     
-    override func viewDidLoad() {
-        let view = self.view as! UIScrollView
-        view.contentSize = CGSize(width: self.view.frame.size.width, height: 600)
-    }
+//    override func viewDidLoad() {
+//        let view = self.view as! UIScrollView
+//        view.contentSize = CGSize(width: self.view.frame.size.width, height: 600)
+//    }
     
     
 //    func makeRoomForImage() {

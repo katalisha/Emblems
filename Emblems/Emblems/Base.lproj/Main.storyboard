@@ -126,72 +126,86 @@
                         <viewControllerLayoutGuide type="top" id="nGA-zg-vrj"/>
                         <viewControllerLayoutGuide type="bottom" id="l2X-No-fJC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HAb-Ly-CGB" customClass="UIScrollView">
+                    <view key="view" contentMode="scaleToFill" id="HAb-Ly-CGB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kId-Yj-kg0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u8-QD-Wln">
-                                        <rect key="frame" x="262" y="80" width="77" height="30"/>
-                                        <state key="normal" title="Take Photo">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="takePhoto" destination="tbG-1I-P1y" eventType="touchUpInside" id="U6L-mY-Qta"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add notes..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUz-Qr-XFG">
-                                        <rect key="frame" x="200" y="424" width="200" height="100"/>
-                                        <accessibility key="accessibilityConfiguration" hint="" label="Notes..."/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="AHL-qK-guj"/>
-                                            <constraint firstAttribute="width" constant="200" id="N7o-WT-3Jn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX6-sI-oCH">
-                                        <rect key="frame" x="257" y="118" width="87" height="30"/>
-                                        <state key="normal" title="From Library">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Qv-ZP-u5f">
-                                        <rect key="frame" x="175" y="159" width="250" height="250"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="ONq-kw-F1E"/>
-                                            <constraint firstAttribute="width" constant="250" id="TUw-ZH-0Dt"/>
-                                            <constraint firstAttribute="height" constant="194" id="eVD-qi-mql"/>
-                                            <constraint firstAttribute="width" constant="322" id="mSw-Xf-rY5"/>
-                                            <constraint firstAttribute="height" constant="194" id="pYW-cp-Vd2"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="eVD-qi-mql"/>
-                                                <exclude reference="mSw-Xf-rY5"/>
-                                                <exclude reference="pYW-cp-Vd2"/>
-                                            </mask>
-                                        </variation>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-sC-nyG">
-                                        <rect key="frame" x="276" y="532" width="49" height="30"/>
-                                        <state key="normal" title="Submit">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksr-8C-Rwa">
+                                <rect key="frame" x="261" y="72" width="77" height="30"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto" destination="tbG-1I-P1y" eventType="touchUpInside" id="HU7-pX-rtf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2AY-l0-noT">
+                                <rect key="frame" x="174" y="141" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstItem="qX6-sI-oCH" firstAttribute="top" secondItem="8u8-QD-Wln" secondAttribute="bottom" constant="8" id="F6v-13-SRL"/>
-                                    <constraint firstItem="2Qv-ZP-u5f" firstAttribute="top" secondItem="qX6-sI-oCH" secondAttribute="bottom" constant="11" id="sHY-3C-OjA"/>
-                                    <constraint firstItem="UUz-Qr-XFG" firstAttribute="top" secondItem="2Qv-ZP-u5f" secondAttribute="bottom" constant="15" id="v1X-Ic-VrG"/>
-                                    <constraint firstItem="JOF-sC-nyG" firstAttribute="top" secondItem="UUz-Qr-XFG" secondAttribute="bottom" constant="8" id="xyK-ZX-ux8"/>
+                                    <constraint firstAttribute="height" constant="250" id="N42-wW-YR8"/>
+                                    <constraint firstAttribute="width" constant="322" id="PcR-mk-lVc"/>
+                                    <constraint firstAttribute="height" constant="194" id="R5W-CV-Spr"/>
+                                    <constraint firstAttribute="width" constant="250" id="T4o-ra-43B"/>
+                                    <constraint firstAttribute="height" constant="194" id="vbn-6L-v6n"/>
                                 </constraints>
-                            </view>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PcR-mk-lVc"/>
+                                        <exclude reference="R5W-CV-Spr"/>
+                                        <exclude reference="vbn-6L-v6n"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0H-Nc-Rbo">
+                                <rect key="frame" x="256" y="103" width="87" height="30"/>
+                                <state key="normal" title="From Library">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l3-11-Tmy">
+                                <rect key="frame" x="275" y="513" width="49" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add notes..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGa-Tn-0sW">
+                                <rect key="frame" x="200" y="405" width="200" height="100"/>
+                                <accessibility key="accessibilityConfiguration" hint="" label="Notes..."/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Gx8-cV-SnH"/>
+                                    <constraint firstAttribute="height" constant="100" id="I3a-bI-Krz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2AY-l0-noT" firstAttribute="top" secondItem="D0H-Nc-Rbo" secondAttribute="bottom" constant="8" id="168-Sl-Ieq"/>
+                            <constraint firstItem="7l3-11-Tmy" firstAttribute="top" secondItem="aGa-Tn-0sW" secondAttribute="bottom" constant="8" id="6fX-i9-DQJ"/>
+                            <constraint firstAttribute="centerX" secondItem="2AY-l0-noT" secondAttribute="centerX" constant="1" id="BNz-we-oyG"/>
+                            <constraint firstAttribute="centerX" secondItem="aGa-Tn-0sW" secondAttribute="centerX" id="Jth-EP-NI7"/>
+                            <constraint firstItem="ksr-8C-Rwa" firstAttribute="top" secondItem="nGA-zg-vrj" secondAttribute="bottom" constant="8" id="KDY-cI-VNS"/>
+                            <constraint firstAttribute="centerY" secondItem="2AY-l0-noT" secondAttribute="centerY" constant="34" id="QUf-bg-KuP"/>
+                            <constraint firstAttribute="centerX" secondItem="D0H-Nc-Rbo" secondAttribute="centerX" constant="0.5" id="SDt-VY-cii"/>
+                            <constraint firstAttribute="centerY" secondItem="7l3-11-Tmy" secondAttribute="centerY" constant="-228" id="Sak-Gu-KH6"/>
+                            <constraint firstAttribute="centerY" secondItem="aGa-Tn-0sW" secondAttribute="centerY" constant="-155" id="ahz-ew-xNC"/>
+                            <constraint firstAttribute="centerX" secondItem="ksr-8C-Rwa" secondAttribute="centerX" constant="0.5" id="cMf-zM-Ue1"/>
+                            <constraint firstAttribute="centerY" secondItem="D0H-Nc-Rbo" secondAttribute="centerY" constant="182" id="hJB-Wb-O28"/>
+                            <constraint firstItem="D0H-Nc-Rbo" firstAttribute="top" secondItem="ksr-8C-Rwa" secondAttribute="bottom" constant="1" id="owg-4W-Tfr"/>
+                            <constraint firstAttribute="centerY" secondItem="ksr-8C-Rwa" secondAttribute="centerY" constant="213" id="skW-0n-mh7"/>
+                            <constraint firstAttribute="centerX" secondItem="7l3-11-Tmy" secondAttribute="centerX" constant="0.5" id="uwt-qu-eoA"/>
+                            <constraint firstItem="aGa-Tn-0sW" firstAttribute="top" secondItem="2AY-l0-noT" secondAttribute="bottom" constant="14" id="wX6-mh-Ibn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QUf-bg-KuP"/>
+                                <exclude reference="skW-0n-mh7"/>
+                                <exclude reference="hJB-Wb-O28"/>
+                                <exclude reference="ahz-ew-xNC"/>
+                                <exclude reference="Sak-Gu-KH6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Report Misuse" id="txV-7e-JIK">
                         <barButtonItem key="leftBarButtonItem" title="Home" id="YbJ-Ub-3K3">
@@ -203,7 +217,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="imageView" destination="2Qv-ZP-u5f" id="MHW-W2-sRm"/>
+                        <outlet property="imageView" destination="2AY-l0-noT" id="yd4-eK-q4H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbf-BY-dSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
