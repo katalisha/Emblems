@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "99EE2281035B3E9D61AFE5C9"
-               BuildableName = "SendGrid.framework"
-               BlueprintName = "Pods-Emblems-SendGrid"
+               BlueprintIdentifier = "A63665CE6C6E33EE8B3C191E"
+               BuildableName = "Alamofire.framework"
+               BlueprintName = "Pods-Emblems-Alamofire"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

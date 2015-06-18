@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'Emblems' do
     pod 'SendGrid', '~>  0.2.6'
+    pod 'Alamofire', '~> 1.2'
 end
 
 target 'EmblemsTests' do
