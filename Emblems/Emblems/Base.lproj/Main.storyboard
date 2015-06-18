@@ -227,7 +227,7 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="contentViewSizing" destination="H1a-gn-wOC" id="our-em-HYk"/>
-                        <outlet property="scrollViewKeyboardScrollControl" destination="UqY-a3-hoc" id="ec5-2V-EYk"/>
+                        <outlet property="scrollView" destination="UqY-a3-hoc" id="2E0-mx-7E3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbf-BY-dSz" userLabel="First Responder" sceneMemberID="firstResponder"/>

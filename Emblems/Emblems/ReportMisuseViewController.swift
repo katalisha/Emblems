@@ -16,8 +16,9 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var scrollViewKeyboardScrollControl: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    weak var activeTextField: UITextField!
 //    override func viewDidLoad() {
 //        let view = self.view as! UIScrollView
 //        view.contentSize = CGSize(width: self.view.frame.size.width, height: 600)
@@ -25,7 +26,19 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
     
     @IBOutlet weak var contentViewSizing: UIView!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.registerForKeyboardNotifications()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     override func viewDidLoad() {
+
+// OBJECTIVE-C CODE
 //        NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
 //            attribute:NSLayoutAttributeLeading
 //            relatedBy:0
@@ -34,32 +47,82 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
 //            multiplier:1.0
 //            constant:0];
 //        [self.view addConstraint:leftConstraint];
+
+// SWIFT TRANSLATION
         let leftConstraint = NSLayoutConstraint(item: self.contentViewSizing, attribute: NSLayoutAttribute.Leading, relatedBy: .Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 0)
         self.view.addConstraint(leftConstraint)
-        
+
+        // OBJECTIVE-C CODE
+        //        NSLayoutConstraint *rightConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+        //            attribute:NSLayoutAttributeTrailing
+        //            relatedBy:0
+        //            toItem:self.view
+        //            attribute:NSLayoutAttributeRight
+        //            multiplier:1.0
+        //            constant:0];
+        //        [self.view addConstraint:rightConstraint];
+
+// SWIFT TRANSLATION
         let rightConstraint = NSLayoutConstraint(item: self.contentViewSizing, attribute: NSLayoutAttribute.Trailing, relatedBy: .Equal, toItem: self.view, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 0)
         self.view.addConstraint(rightConstraint)
+
         
-//        NSLayoutConstraint *rightConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
-//            attribute:NSLayoutAttributeTrailing
-//            relatedBy:0
-//            toItem:self.view
-//            attribute:NSLayoutAttributeRight
-//            multiplier:1.0
-//            constant:0];
-//        [self.view addConstraint:rightConstraint];
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidShow:"), name: UIKeyboardDidShowNotification, object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillBeHidden"), name: UIKeyboardWillHideNotification, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidShow:"), name: UIKeyboardDidShowNotification, object: nil)
+//        
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillBeHidden"), name: UIKeyboardWillHideNotification, object: nil)
+//    }
+//    
+//    @IBAction func textFieldDidBeginEditing(sender:UITextField) {
+//        self.activeField = sender;
+//    }
+//    
+//    @IBAction func textFieldDidEndEditing(sender:UITextField) {
+//        self.activeField = nil;
+//    }
     }
     
-    @IBAction func textFieldDidBeginEditing(sender:UITextField) {
-        self.activeField = sender;
+    
+// KEYBOARD MANAGEMENT FROM http://creativecoefficient.net/swift/keyboard-management/
+    
+    func registerForKeyboardNotifications () {
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self, selector: "keyboardWillBeShown:", name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func textFieldDidEndEditing(sender:UITextField) {
-        self.activeField = nil;
+    func keyboardWillBeShown(sender: NSNotification) {
+        let info: NSDictionary = sender.userInfo!
+        let value: NSValue = info.valueForKey(UIKeyboardFrameBeginUserInfoKey) as! NSValue
+        let keyboardSize: CGSize = value.CGRectValue().size
+        let contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        
+        var aRect: CGRect = self.view.frame
+        aRect.size.height -= keyboardSize.height
+        let activeTextFieldRect: CGRect? = activeTextField?.frame
+        let activeTextFieldOrigin: CGPoint? = activeTextFieldRect?.origin
+        if (!CGRectContainsPoint(aRect, activeTextFieldOrigin!)) {
+            scrollView.scrollRectToVisible(activeTextFieldRect!, animated:true)
+        }
+    }
+    
+    func keyboardWillBeHidden(sender: NSNotification) {
+        let contentInsets: UIEdgeInsets = UIEdgeInsetsZero
+//        scrollView.scrollIndicator = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    //MARK: - UITextField Delegate Methods
+    
+    func textFieldDidBeginEditing(textField: UITextField!) {
+        activeTextField = textField
+        scrollView.scrollEnabled = true
+    }
+        
+    func textFieldDidEndEditing(textField: UITextField!) {
+        activeTextField = nil
+        scrollView.scrollEnabled = false
     }
     
 //    func keyboardDidShow(notification: NSNotification) {
@@ -68,29 +131,29 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
 //    }
     
     
-    - (void) keyboardDidShow:(NSNotification *)notification
-    {
-    NSDictionary* info = [notification userInfo];
-    CGRect kbRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    kbRect = [self.view convertRect:kbRect fromView:nil];
-    
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbRect.size.height, 0.0);
-    self.scrollView.contentInset = contentInsets;
-    self.scrollView.scrollIndicatorInsets = contentInsets;
-    
-    CGRect aRect = self.view.frame;
-    aRect.size.height -= kbRect.size.height;
-    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
-    [self.scrollView scrollRectToVisible:self.activeField.frame animated:YES];
-    }
-    }
-    
-    - (void) keyboardWillBeHidden:(NSNotification *)notification
-    {
-    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-    self.scrollView.contentInset = contentInsets;
-    self.scrollView.scrollIndicatorInsets = contentInsets;
-    }
+//    - (void) keyboardDidShow:(NSNotification *)notification
+//    {
+//    NSDictionary* info = [notification userInfo];
+//    CGRect kbRect = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+//    kbRect = [self.view convertRect:kbRect fromView:nil];
+//    
+//    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbRect.size.height, 0.0);
+//    self.scrollView.contentInset = contentInsets;
+//    self.scrollView.scrollIndicatorInsets = contentInsets;
+//    
+//    CGRect aRect = self.view.frame;
+//    aRect.size.height -= kbRect.size.height;
+//    if (!CGRectContainsPoint(aRect, self.activeField.frame.origin) ) {
+//    [self.scrollView scrollRectToVisible:self.activeField.frame animated:YES];
+//    }
+//    }
+//    
+//    - (void) keyboardWillBeHidden:(NSNotification *)notification
+//    {
+//    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+//    self.scrollView.contentInset = contentInsets;
+//    self.scrollView.scrollIndicatorInsets = contentInsets;
+//    }
     
     
 //    func makeRoomForImage() {
