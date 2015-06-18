@@ -67,7 +67,13 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
 //        var kbRect =
 //    }
     
+    // Problematic translation of Objective-C to Swift
+    func keyboardDidShow(notification: NSNotification) {
+        let info : NSDictionary = notification.userInfo
+        let kbRect : CGRect = info.objectForKey(UIKeyboardFrameBeginUserInfoKey)
+    }
     
+    // Objective-C code
     - (void) keyboardDidShow:(NSNotification *)notification
     {
     NSDictionary* info = [notification userInfo];
