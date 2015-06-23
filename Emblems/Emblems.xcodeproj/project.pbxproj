@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4ECA6DCF1CB77EA7820B70B9 /* Pods_Emblems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D65EA78CCEED388E18A8D1C /* Pods_Emblems.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		660CA7A41B32C87E00A30302 /* SendGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660CA7A31B32C87E00A30302 /* SendGrid.swift */; };
 		668B905D1B3023E000DE3E23 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 668B905C1B3023E000DE3E23 /* Podfile */; };
 		66E70A7C1B26E1AE00E15ED4 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E70A7B1B26E1AE00E15ED4 /* ImagePickerViewController.swift */; };
 		66F044DB1B1D9FCF00AED5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F044DA1B1D9FCF00AED5FF /* AppDelegate.swift */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		36570D3AE1CA0C0FAABAF755 /* Pods-Emblems.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emblems.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emblems/Pods-Emblems.debug.xcconfig"; sourceTree = "<group>"; };
 		3CE595EA35DF6BD790F451D8 /* Pods-Emblems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emblems.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emblems/Pods-Emblems.release.xcconfig"; sourceTree = "<group>"; };
+		660CA7A21B32C66400A30302 /* Emblems-Pods-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Emblems-Pods-Bridging-Header.h"; path = "Emblems/Emblems-Pods-Bridging-Header.h"; sourceTree = "<group>"; };
+		660CA7A31B32C87E00A30302 /* SendGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendGrid.swift; sourceTree = "<group>"; };
 		668B905C1B3023E000DE3E23 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		66E70A7B1B26E1AE00E15ED4 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		66F044D51B1D9FCF00AED5FF /* Emblems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emblems.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +89,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		660CA7A11B32C61500A30302 /* Podfiles */ = {
+			isa = PBXGroup;
+			children = (
+				660CA7A21B32C66400A30302 /* Emblems-Pods-Bridging-Header.h */,
+			);
+			name = Podfiles;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		66F044CC1B1D9FCF00AED5FF = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +122,11 @@
 		66F044D71B1D9FCF00AED5FF /* Emblems */ = {
 			isa = PBXGroup;
 			children = (
+				660CA7A11B32C61500A30302 /* Podfiles */,
 				66F0450A1B1DBFC000AED5FF /* Assets */,
 				66F044FC1B1DABEE00AED5FF /* View Controllers */,
 				66F044DA1B1D9FCF00AED5FF /* AppDelegate.swift */,
+				660CA7A31B32C87E00A30302 /* SendGrid.swift */,
 				66F044DC1B1D9FCF00AED5FF /* ViewController.swift */,
 				66F044DE1B1D9FCF00AED5FF /* Main.storyboard */,
 				66F044E11B1D9FCF00AED5FF /* Images.xcassets */,
@@ -350,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F045001B1DB74E00AED5FF /* ReportMisuseViewController.swift in Sources */,
+				660CA7A41B32C87E00A30302 /* SendGrid.swift in Sources */,
 				66E70A7C1B26E1AE00E15ED4 /* ImagePickerViewController.swift in Sources */,
 				66F044DD1B1D9FCF00AED5FF /* ViewController.swift in Sources */,
 				66F044DB1B1D9FCF00AED5FF /* AppDelegate.swift in Sources */,

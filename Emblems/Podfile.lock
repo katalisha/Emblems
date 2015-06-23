@@ -20,16 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Alamofire (1.2.3)
   - SendGrid (0.2.6):
     - AFNetworking (~> 2.0)
     - SMTPAPI
   - SMTPAPI (0.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 1.2)
   - SendGrid (~> 0.2.6)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
   SendGrid: dc8275118d276ad56cfbb8a9ebcdecf0a4387f36
   SMTPAPI: 84bcd13fb0c572a7a16c2045ebb4f32c97892c90
 

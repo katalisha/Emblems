@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Emblems-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Emblems-SMTPAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1EA06CE3A02F65670F5297D5</key>
+		<key>23E7ABF1A21253750F548736</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20B113E5B4ECD4C47D07245D</key>
+		<key>726796727DE89895399C36A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>312576AB00EECEA27F06DDD1</key>
+		<key>99EE2281035B3E9D61AFE5C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93CE6F57D526E6C81C84C9A2</key>
+		<key>A63665CE6C6E33EE8B3C191E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2EA709278E46329F483137</key>
 		<dict>
 			<key>primary</key>
 			<true/>

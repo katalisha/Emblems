@@ -198,6 +198,10 @@ class ReportMisuseViewController: UIViewController, UIImagePickerControllerDeleg
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func sendEmailViaSendGrid(sender: AnyObject) {
+        var sendGrid = SendGridTest()
+        sendGrid.sendToSendGrid()
+    }
 }
 
 extension UIImage {
